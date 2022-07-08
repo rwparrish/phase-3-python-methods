@@ -1,7 +1,3 @@
-#!/usr/bin/env python3
-
-from tkinter.tix import INTEGER
-
 
 def greet_programmer():
     print('Hello, programmer!')
@@ -16,7 +12,8 @@ def add(num1, num2):
     return num1 + num2
 
 def halve(number):
-    if type(number) != INTEGER:
-        return None
-    else:
+    if isinstance(number, (int, float)):
         return number/2
+    else:
+        return None
+        
